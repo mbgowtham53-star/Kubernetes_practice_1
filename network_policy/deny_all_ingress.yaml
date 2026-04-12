@@ -9,3 +9,4 @@ spec:
 
 # This NetworkPolicy denies all ingress traffic to all pods in the namespace.
 # here we are not mentioning any of the rules for ingress traffic(like port numbers), so by default all the ingress traffic will be denied to all the pods in the namespace.
+# here we are not giving any port entry so all the inccoming traffic to the pods will be blocked, podSelector: {} this means all pods.

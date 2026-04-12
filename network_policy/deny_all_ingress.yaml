@@ -1,0 +1,11 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-ingress-all
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+
+# This NetworkPolicy denies all ingress traffic to all pods in the namespace.
+# here we are not mentioning any of the rules for ingress traffic(like port numbers), so by default all the ingress traffic will be denied to all the pods in the namespace.

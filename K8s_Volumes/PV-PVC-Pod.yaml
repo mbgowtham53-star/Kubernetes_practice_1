@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: pvc-mount-pod
+spec:
+  containers:
+    - name: ip-app
+      image: harshajain/ip_app
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - name: pvc-volume
+          mountPath: /app/volume-pvc
+  volumes:
+    - name: pvc-volume
+      persistentVolumeClaim:
+        claimName: my-pvc

@@ -11,5 +11,5 @@ spec:
   volumes:
     - name: hostpath-volume
       hostPath:
-      path: /home/ubuntu/hostpath-data
-      type: DirectoryOrCreate
+        path: /home/ubuntu/hostpath-data
+        type: DirectoryOrCreate
